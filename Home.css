@@ -1,0 +1,42 @@
+/* Reset default padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure html and body take up the full viewport height */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for the Home Section */
+.home {
+  width: vh;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Relative positioning for absolute child positioning */
+  overflow: hidden; /* Hide any overflow */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  color: white; /* Text color */
+  text-shadow: 2px 2px 4px #000; /* Text shadow for better readability */
+}
+
+.image-background {
+  position: absolute; /* Absolute positioning to cover the .home section */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: url("../assets/banner-bg.jpg") no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire area */
+  z-index: -1; /* Ensure the image is behind the content */
+}
+
+.home-content {
+  z-index: 1; /* Ensure content is above the background image */
+  text-align: center; /* Center text */
+  padding: 20px; /* Optional: add some padding */
+}

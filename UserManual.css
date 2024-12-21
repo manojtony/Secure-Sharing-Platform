@@ -1,0 +1,42 @@
+/* Styles for the User Manual Section */
+.user-manual {
+  width: 100%;
+  min-height: 860px;
+  position: relative; /* Relative positioning for absolute child positioning */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  background: #442aa4;
+  overflow: hidden; /* Hide any overflow */
+  color: black; /* Text color */
+}
+
+.user-manual .image-background {
+  position: absolute; /* Absolute positioning to cover the .user-manual section */
+  top: 50px;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: url("../assets/user.jpg") no-repeat center center; /* Background image */
+  background-size: 25cm;
+  /* Cover the entire area */
+  z-index: 0; /* Ensure the image is behind the content */
+  margin-top: 1px;
+}
+
+.user-manual-content {
+  z-index: 1; /* Ensure content is above the background image */
+  text-align: center; /* Center text */
+  padding: 10px; /* Optional: add some padding */
+}
+.user {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  right: 2px;
+  text-align: center; /* Center the text horizontally */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: aliceblue;
+}
